@@ -1,0 +1,23 @@
+.myCart
+{
+    display:flex;
+    flex-direction: column;
+    //justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    box-shadow: 10px;
+    img{
+        width:100px;
+        height:100px;
+    }
+    div{
+        display:flex;
+        flex-direction: column;
+        //justify-content: center;
+        align-items: center;
+        p{
+
+            font-size: 15px;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+button.btn-delete-all {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background: black;
+    cursor: pointer;
+    border: 1px solid black;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 2px 2px;
+    transition: all 0.3s ease;
+}
+
+button.btn-delete-all:hover {
+    background: white;
+    color: black;
+}
+.cart-product__buscar{
+    align-self: center;
+    justify-self: center;
+}
+.cart_item_info div{
+    padding-left: 30px;
+}
+
+.cart_item {
+    display:flex;
+    flex-direction: column;
+    padding-top:30px;
+}
+
+.item-cart-search {
+    /* float: left; */
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    justify-self: center;
+    width: 150px;
+    border-bottom: 1px solid #ccc;
+    
+}
+
+.datopedido__h2{
+    margin-top: 50px;
+}

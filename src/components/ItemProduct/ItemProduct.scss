@@ -1,0 +1,35 @@
+.card-body img{
+    width: 150px;
+    height: 150px;
+    justify-self: center;
+    align-self: center;
+
+}
+    .float-options {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        p {
+            font-size: 17px;
+            padding: 5px;
+            margin: 0;
+            line-height: 16px;
+            width: 70px;
+            text-align: center;
+            background: #f8b422;
+            color: white;
+        }
+        
+        button {
+            background: none;
+            border: none;
+            margin-right: 5px;
+        }
+    }
+    
+.item-product{
+    margin:15px;
+}   
