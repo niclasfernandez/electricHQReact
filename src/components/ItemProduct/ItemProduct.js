@@ -8,14 +8,14 @@ import { Link } from "react-router-dom";
 import IMAGEPATH from "../../utils/utils";
 
 const ItemProduct = ({ data }) => {
-  const { id, tipo, imageName, precio, marca, modelo, stock, topFeature1 } =
+  const { id,_id, tipo, imageName, precio, marca, modelo, stock, topFeature1 } =
     data;
   const [quantitySelected, setQuantitySelected] = useState(0);
 
   return (
     <div className="card item-product">
       <div className="float-options">
-        <Link to={`/productos/${tipo}/${id}`}>
+        <Link to={`/productos/${_id}`}>
           <p>Details</p>
         </Link>
       </div>

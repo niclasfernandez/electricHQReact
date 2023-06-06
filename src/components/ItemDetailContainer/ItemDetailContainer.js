@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
   const [productData, setProductData] = useState({});
 
   useEffect(() => {
-    getProduct().then((res) => {
+    getData().then((res) => {
       setProductData(res);
     });
   }, [id]); //en montaje
@@ -25,6 +25,33 @@ const ItemDetailContainer = () => {
 
   //   return product;
   // };
+
+  async function getData(){
+
+    console.log("localStorage ",localStorage.getItem('authToken'))
+    const response = await fetch("https://ehqbackend-production.up.railway.app/api/products/${id}", {
+      method: "GET",
+      headers: {
+        "Content-type":"application/json",
+        "Authorization":localStorage.getItem('authToken')
+      },
+    });
+    console.log("response status", response.status)
+    let data=null
+    // if (response.status == 401)
+    //   //setListProducts("unauthorized")
+    // else{
+      data = await response.json()
+      console.log("data del fetch", JSON.stringify(data))
+      //console.log("Data Products ", data.products)
+      //category == "all" || category == undefined?
+      //setListProducts(data.products)
+      //:setListProducts(data.products.filter((producto) => producto.tipo == category));
+      //updUser(data.user.user)
+    //}
+    return(data)
+
+  }
   async function getProduct(){
     console.log("entra en getDataDetails")
     const path = `https://ehqbackend-production.up.railway.app/api/products/${id}`
